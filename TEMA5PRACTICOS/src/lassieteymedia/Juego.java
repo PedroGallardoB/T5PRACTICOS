@@ -11,40 +11,40 @@ public class Juego {
 		String carta = "A";//Cartas especiales
 		double puntuacion=0;
 
-		palo = (int) (Math.random() * 3)+1;//Genera el palo
-		numero = (int) (Math.random() * 9)+1;//Genera el numero
+		palo = (int) (Math.random() * 4);//Genera el palo
+		numero = (int) (Math.random() * 10);//Genera el numero
 		
 		
 			switch (palo) {//Asigna un nombre a los palos
-			case 1:
+			case 0:
 				paloStr = " de copas";
 				break;
-			case 2:
+			case 1:
 				paloStr = " de oros";
 				break;
-			case 3:
+			case 2:
 				paloStr = " de bastos";
 				break;
-			case 4:
+			case 3:
 				paloStr = " de espadas";
 				break;
 			}
 
-			if (numero > 7) {//Asigna un nombre a las cartas especiales
+			if (numero > 6) {//Asigna un nombre a las cartas especiales
 				switch (numero) {
-				case 8:
+				case 7:
 					carta = "Sota";
 					break;
-				case 9:
+				case 8:
 					carta = "Caballo";
 					break;
-				case 10:
+				case 9:
 					carta = "Rey";
 					break;
 				}
 			}
 
-				if (numero <= 7) {//Si la carta no vale medio punto
+				if (numero <= 8) {//Si la carta no vale medio punto
 					System.out.println((numero+1) + paloStr + " VALOR: " + valores[palo][numero]);//Imprime carta
 				} else {//De lo contrario
 					System.out.println(carta + paloStr + " VALOR: " + valores[palo][numero]);//Imprime carta
