@@ -44,7 +44,7 @@ public class Juego {
 				}
 			}
 
-				if (numero <= 8) {//Si la carta no vale medio punto
+				if (numero <= 6) {//Si la carta no vale medio punto
 					System.out.println((numero+1) + paloStr + " VALOR: " + valores[palo][numero]);//Imprime carta
 				} else {//De lo contrario
 					System.out.println(carta + paloStr + " VALOR: " + valores[palo][numero]);//Imprime carta
